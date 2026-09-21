@@ -1,0 +1,46 @@
+/* Tono piedra oscuro Lara para apps GTK3 reacias */
+window, dialog, assistant, messagedialog {
+  background-color: #121815;
+  color: #e6e2d4;
+}
+
+/* Botones y campos al tono piedra */
+button, .button, button.flat {
+  background-color: #1a221e;
+  background-image: none;
+  color: #e6e2d4;
+  border-color: #2a3833;
+}
+button:hover, .button:hover {
+  background-color: #2a3833;
+}
+entry, textview text, spinbutton {
+  background-color: #0e1210;
+  color: #e6e2d4;
+}
+combobox box, dropdown {
+  background-color: #1a221e;
+  color: #e6e2d4;
+}
+
+/* Switches dorados */
+switch {
+  background-color: #2a3833;
+  border-color: #2a3833;
+}
+switch:checked {
+  background-color: #d9b36c;
+}
+switch slider {
+  background-color: #e6e2d4;
+}
+
+/* Headerbar GTK3 al tono piedra */
+headerbar, .titlebar,
+headerbar.titlebar {
+  background-color: #121815;
+  background-image: none;
+  color: #e6e2d4;
+  border-color: #2a3833;
+  box-shadow: none;
+}

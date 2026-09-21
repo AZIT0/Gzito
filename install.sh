@@ -421,6 +421,7 @@ DOTFILES=(
   "config/starship.toml:.config/starship.toml"
   "config/nvim/init.lua:.config/nvim/init.lua"
   "config/gtk-4.0/gtk.css:.config/gtk-4.0/gtk.css"
+  "config/gtk-3.0/gtk.css:.config/gtk-3.0/gtk.css"
   "themes/Pills/gnome-shell/gnome-shell.css:.local/share/themes/Pills/gnome-shell/gnome-shell.css"
 )
 

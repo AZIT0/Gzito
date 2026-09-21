@@ -69,7 +69,7 @@ remove_extensions() {
 remove_dotfiles() {
   log "3 · Dotfiles fuera"
   rm -f ~/.config/ghostty/config ~/.config/fastfetch/config.jsonc ~/.config/starship.toml
-  rm -f ~/.config/gtk-4.0/gtk.css ~/.config/nvim/init.lua
+  rm -f ~/.config/gtk-4.0/gtk.css ~/.config/gtk-3.0/gtk.css ~/.config/nvim/init.lua
   rm -rf ~/.local/share/themes/Pills ~/.local/share/backgrounds/river.jpg
   sed -i '/# starship prompt/d; /starship init fish | source/d' \
     ~/.config/fish/config.fish 2>/dev/null || true
