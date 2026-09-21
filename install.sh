@@ -299,7 +299,8 @@ step_look() {
   gsettings set "$IFACE" gtk-theme "$(pick_first \
     /usr/share/themes/Colloid-Green-Dark-Compact-Everforest \
     ~/.themes/Colloid-Green-Dark-Compact-Everforest \
-    /usr/share/themes/Materia-dark-compact || echo 'Materia-dark-compact')"
+    /usr/share/themes/Materia-dark-compact \
+    ~/.themes/Materia-dark-compact || echo 'Materia-dark-compact')"
   gsettings set "$IFACE" icon-theme "$(pick_first \
     /usr/share/icons/Papirus-Dark ~/.icons/Papirus-Dark \
     /usr/share/icons/Colloid-Green-Everforest-Dark ~/.icons/Colloid-Green-Everforest-Dark || echo 'Papirus-Dark')"
