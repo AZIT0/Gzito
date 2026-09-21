@@ -3,23 +3,27 @@
 # Gzito · instalador del rice minimalista (píldoras) para GNOME
 # -----------------------------------------------------------------------------
 # Qué hace:
-#   1. Paquetes del sistema (Arch/CachyOS o Fedora) + Chaotic-AUR/paru + Flatpak
-#   2. Descarga 9 extensiones (versión según tu GNOME) y las activa
+#   1. Paquetes del sistema (Arch/CachyOS o Fedora)
+#   2. Extensiones GNOME vía gext (últimas) y las activa
 #   3. Limpia todos los atajos y aplica los propios construidos desde cero
-#   4. Aplica estética base (temas, fuentes, workspaces, foco)
-#   5. Configura cada extensión (dock, blur, barra, monitores…)
-#   6. Copia dotfiles incluidos (ghostty, fastfetch, starship, fish, nvim, Pills)
-#   7. Instala user.js de Firefox (Betterfox + DoH Mullvad) y el wallpaper
+#   4. Estética base (temas, fuentes, modo oscuro, workspaces, foco)
+#   5. Prefs de extensiones (dock, blur, barra, monitores…)
+#   6. Dotfiles (ghostty, fastfetch, starship, nvim, gtk, Pills)
+#   7. Opcionales: Firefox/Zen, wallpaper, Chaotic-AUR, Flatpak
 #
 # Uso:
 #   ./install.sh               # luego: cerrar sesión y entrar
+#   ./install.sh --yes         # responde Sí a todo
 #
 # Estructura del repo:
 #   install.sh  rice-uninstall.sh  README.md
-#   config/ (ghostty, fastfetch, starship, nvim, gtk-4.0)  themes/Pills
+#   config/ (ghostty, fastfetch, starship, nvim, gtk-4.0, gtk-3.0)  themes/Pills
 #   wallpapers/  screenshots/
-# =============================================================================
 set -euo pipefail
+
+# ./install.sh --yes responde Sí a todas las preguntas
+AUTO=0
+[[ "${1:-}" == "--yes" ]] && AUTO=1
 
 # -----------------------------------------------------------------------------
 # Configuración
@@ -68,6 +72,7 @@ log() { echo -e "\n== $* =="; }
 
 # Pregunta S/n (por defecto Sí; sin terminal responde No)
 ask() {
+  [[ "$AUTO" == 1 ]] && return 0
   [[ -t 0 ]] || return 1
   local ans=""
   read -r -p "$1 [S/n] " ans || true
@@ -313,6 +318,7 @@ step_look() {
   gsettings set "$IFACE" cursor-theme "$(pick_first \
     /usr/share/icons/capitaine-cursors-light ~/.icons/capitaine-cursors-light \
     /usr/share/icons/capitaine-cursors ~/.icons/capitaine-cursors || echo 'Adwaita')"
+  gsettings set "$IFACE" color-scheme 'prefer-dark'
   gsettings set "$IFACE" clock-show-date true
   gsettings set "$IFACE" clock-show-weekday true
   gsettings set org.gnome.desktop.default-applications.terminal exec 'ghostty'

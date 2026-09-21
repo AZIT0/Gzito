@@ -1,4 +1,4 @@
--- Rice: oscuro #0e0e12 + Tokyo Night, leader <Espacio>
+-- Rice: paleta Ghostty #121815 + Tokyo Night, leader <Espacio>
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -30,7 +30,34 @@ require("lazy").setup({
   { "folke/tokyonight.nvim", lazy = false, priority = 1000,
     opts = {
       style = "night",
-      on_colors = function(c) c.bg = "#0e0e12" c.bg_dark = "#0e0e12" end,
+      -- Paleta igualada a Ghostty (Gzito/config/ghostty/config)
+      on_colors = function(c)
+        c.bg = "#121815"
+        c.bg_dark = "#121815"
+        c.bg_float = "#1c2420"
+        c.bg_highlight = "#2a3833"
+        c.bg_popup = "#1c2420"
+        c.bg_search = "#2a3833"
+        c.bg_sidebar = "#121815"
+        c.bg_statusline = "#121815"
+        c.bg_visual = "#2a3833"
+        c.border = "#5a6b62"
+        c.fg = "#e6e2d4"
+        c.fg_dark = "#cfc9b8"
+        c.fg_float = "#e6e2d4"
+        c.fg_gutter = "#5a6b62"
+        c.fg_sidebar = "#cfc9b8"
+        c.comment = "#5a6b62"
+        c.red = "#c96a6a"
+        c.green = "#7fd6b5"
+        c.yellow = "#d9b36c"
+        c.blue = "#7aa8c9"
+        c.magenta = "#b49ae0"
+        c.cyan = "#6fc2c2"
+        c.orange = "#d9b36c"
+        c.teal = "#6fc2c2"
+        c.purple = "#b49ae0"
+      end,
     },
     config = function(_, opts)
       require("tokyonight").setup(opts)
