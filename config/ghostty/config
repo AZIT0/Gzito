@@ -1,0 +1,56 @@
+# Ghostty - rice oscuro
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+
+background = 121815
+foreground = e6e2d4
+background-opacity = 1.0
+
+window-decoration = auto
+gtk-titlebar = true
+window-padding-x = 12
+window-padding-y = 12
+
+cursor-style = bar
+cursor-style-blink = false
+cursor-color = d9b36c
+cursor-text = 141b18
+
+# Rendimiento y fluidez
+gtk-single-instance = true
+mouse-hide-while-typing = true
+confirm-close-surface = false
+copy-on-select = true
+scrollback-limit = 10000
+window-theme = dark
+window-padding-balance = true
+
+# Atajos extra
+keybind = ctrl+shift+d=toggle_window_decorations
+keybind = ctrl+shift+enter=new_window
+keybind = ctrl+alt+h=new_split:right
+keybind = ctrl+alt+v=new_split:down
+keybind = ctrl+alt+arrow_up=goto_split:up
+keybind = ctrl+alt+arrow_down=goto_split:down
+keybind = ctrl+alt+arrow_left=goto_split:left
+keybind = ctrl+alt+arrow_right=goto_split:right
+
+selection-foreground = e6e2d4
+selection-background = 2a3833
+
+palette = 0=#1c2420
+palette = 1=#c96a6a
+palette = 2=#7fd6b5
+palette = 3=#d9b36c
+palette = 4=#7aa8c9
+palette = 5=#b49ae0
+palette = 6=#6fc2c2
+palette = 7=#cfc9b8
+palette = 8=#5a6b62
+palette = 9=#e08a8a
+palette = 10=#a5e8cc
+palette = 11=#ecd096
+palette = 12=#9cc4e0
+palette = 13=#cbb6f0
+palette = 14=#93d8d8
+palette = 15=#efe9d8

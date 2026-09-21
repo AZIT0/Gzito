@@ -1,0 +1,33 @@
+@import url("resource:///org/gnome/shell/theme/gnome-shell.css");
+
+/* Barra minimalista - píldoras sutiles */
+#panel {
+  height: 30px;
+  background-color: transparent;
+  background-gradient-direction: none;
+  font-size: 11px;
+}
+#panel:overview {
+  background-color: transparent;
+}
+#panel .panel-button {
+  background-color: rgba(20, 27, 23, 0.6);
+  border-radius: 14px;
+  margin: 2px 2px;
+  padding: 0 8px;
+  color: rgba(232, 228, 216, 0.92);
+}
+#panel .panel-button:hover {
+  background-color: rgba(48, 74, 63, 0.75);
+}
+#panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus {
+  background-color: rgba(64, 96, 82, 0.85);
+}
+/* Reloj centrado */
+#panel #panelCenter .panel-button, #panel .clock, #panel .clock-display, #panel #clockDisplay {
+  background-color: rgba(20, 27, 23, 0.6);
+  border-radius: 14px;
+  margin: 2px 2px;
+  padding: 0 10px;
+  font-weight: 500;
+}

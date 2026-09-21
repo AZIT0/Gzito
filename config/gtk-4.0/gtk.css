@@ -1,0 +1,33 @@
+/* Fondo piedra oscuro Lara en ventanas GTK4 */
+window {
+  background-color: #121815;
+}
+
+/* Sidebar Nautilus al tono piedra */
+window.nautilus-window .navigation-sidebar,
+.nautilus-window .sidebar {
+  background-color: #0e1210;
+}
+
+/* Libadwaita (Settings etc.) al tono piedra */
+@define-color window_bg_color #121815;
+@define-color window_fg_color #e6e2d4;
+@define-color view_bg_color #0e1210;
+@define-color headerbar_bg_color #121815;
+@define-color headerbar_fg_color #e6e2d4;
+@define-color sidebar_bg_color #0e1210;
+@define-color popover_bg_color #1a221e;
+@define-color card_bg_color #1a221e;
+
+/* Acentos dorado Lara */
+@define-color accent_bg_color #d9b36c;
+@define-color accent_fg_color #141b18;
+@define-color accent_color #d9b36c;
+
+/* Paleta Lara completa en estilo dark */
+@define-color destructive_bg_color #c96a6a;
+@define-color destructive_fg_color #141b18;
+@define-color success_bg_color #7fd6b5;
+@define-color success_fg_color #141b18;
+@define-color link_color #d9b36c;
+@define-color selection_bg_color #2a4a3e;
