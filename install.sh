@@ -127,8 +127,8 @@ step_packages() {
       echo "-- $p"
       pkg_try pacman "$p" || echo "(aviso) falló $p"
     done
-    for p in colloid-gruvbox-gtk-theme-git colloid-everforest-gtk-theme-git \
-      colloid-everforest-theme-git colloid-gruvbox-theme-git papirus-folders; do
+    for p in colloid-everforest-gtk-theme-git \
+      colloid-everforest-theme-git papirus-folders; do
       pacman -Q "$p" >/dev/null 2>&1 && continue
       if sudo pacman -S --noconfirm "$p" 2>/dev/null; then
         echo "-- $p OK"
@@ -299,8 +299,6 @@ step_look() {
   gsettings set "$IFACE" gtk-theme "$(pick_first \
     /usr/share/themes/Colloid-Green-Dark-Compact-Everforest \
     ~/.themes/Colloid-Green-Dark-Compact-Everforest \
-    /usr/share/themes/Colloid-Green-Dark-Compact-Gruvbox \
-    ~/.themes/Colloid-Green-Dark-Compact-Gruvbox \
     /usr/share/themes/Materia-dark-compact || echo 'Materia-dark-compact')"
   gsettings set "$IFACE" icon-theme "$(pick_first \
     /usr/share/icons/Papirus-Dark ~/.icons/Papirus-Dark \
