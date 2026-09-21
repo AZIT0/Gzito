@@ -201,6 +201,9 @@ step_flatpak() {
   sudo flatpak config --set languages "es;en" 2>/dev/null || true
   sudo flatpak uninstall --unused -y 2>/dev/null || true
   sudo flatpak update -y 2>/dev/null || echo "(aviso) revisa flatpak manual"
+  # Que los flatpak vean temas e iconos del usuario
+  flatpak override --user --filesystem=~/.themes --filesystem=~/.icons \
+    --filesystem=xdg-config/gtk-3.0 --filesystem=xdg-config/gtk-4.0 2>/dev/null || true
 }
 
 # -----------------------------------------------------------------------------
