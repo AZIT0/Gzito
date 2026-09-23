@@ -28,7 +28,9 @@
 ## Instalar (Arch/CachyOS o Fedora)
 
 ```bash
-git clone https://github.com/AZIT0/Gzito; cd Gzito; ./install.sh
+git clone https://github.com/AZIT0/Gzito;
+cd Gzito;
+./install.sh
 ```
 
 El script pregunta al final por Chaotic-AUR, Flatpak y Firefox/Zen. Al terminar: cerrar sesión y entrar.
@@ -36,7 +38,9 @@ El script pregunta al final por Chaotic-AUR, Flatpak y Firefox/Zen. Al terminar:
 ## Desinstalar
 
 ```bash
-cd Gzito; ./rice-uninstall.sh
+git clone https://github.com/AZIT0/Gzito;
+cd Gzito;
+./rice-uninstall.sh
 ```
 
 Devuelve GNOME a fábrica y borra la carpeta del repo.
